@@ -9,6 +9,8 @@ Its most unique feature is the calcuation of player stats throughout the tournam
 2. you can use generate_match_summary.py to view match summary
 3. all the stats can be calculated in the folder Player_stats
 4. all the stats can be viewed as an Image using print_stats.py. It just needs adjustment of location of stats file on line number
-
+   
+** GENERATE MATCH SUMMARY BEFORE match_stats.py is RUN **
 ** DONT REMOVE ANY FOLDER AND FILES UNTIL match_stats.py IS RUN ** 
-as soon as a match is finished, just run match_stats.py before next match in tournament mode
+as soon as a match is finished, just run match_stats.py before next match in tournament mode, follwed by tournament_stats.py.
+This order has to be followed strictly.
