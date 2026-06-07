@@ -8,5 +8,6 @@ Its most unique feature is the calcuation of player stats throughout the tournam
 1. track a match using cricket_simulator.py
 2. you can use generate_match_summary.py to view match summary
 3. all the stats can be calculated in the folder Player_stats
-4. all the stats can be viewed as an Image using print_stats.py. It just needs adjustment of location of stats file on line number 
+4. all the stats can be viewed as an Image using print_stats.py. It just needs adjustment of location of stats file on line number
+
 ** DONT REMOVE ANY FOLDER AND FILES UNTIL match_stats.py IS RUN ** 
