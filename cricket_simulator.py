@@ -1230,28 +1230,10 @@ def winner_announcement(tournament_title,num_first_bowling_team,
 
 
 #---------------------------------------------------------------------------------------------------
-def create_points_table(tournament_title):
-    points_table = [
-    {
-        "team_name" : " ",
-        "runs_for" : 0,
-        "overs_played" : 0.0,
-        "runs_against" : 0,
-        "overs_conceded" : 0.0,
-        "wins" : 0,
-        "loss" : 0,
-        "run_rate" : 0.0
-    }
-    ]
-    with open(f"{tournament_title}/points_table.json","w") as file:
-        json.dump(points_table,file)  
-     
 #---------------------------------------------------------------------------------------------------
 tournament_title = input("Tournament name : (Else write FRIENDLY) ")
 if not os.path.exists(tournament_title):
     os.mkdir(tournament_title)
-if tournament_title != "FRIENDLY":
-     create_points_table(tournament_title)
 title = input("Enter title of the match (eg: IPL MATCH 1 CSK V MI) : ")
 team1 = input("Enter the first team: ")
 num_team1 = int(input(f"Enter number of players in {team1}: "))
@@ -1283,15 +1265,14 @@ print(f"{first_bowling_team} needs {target} runs to win in {overs} overs. RRR : 
 input("\nPress Enter to start second innings")
 os.system('cls' if os.name == 'nt' else 'clear')
 second_total_runs,second_wickets,second_over,second_run_by_overs = second_innings(tournament_title,target,overs,first_bowling_team,num_first_bowling_team,first_batting_team,num_first_batting_team)
-                                                                    
+actual_first_over = first_over
+actual_second_over = second_over
 input("\nPress Enter to proceed")
 os.system('cls' if os.name == 'nt' else 'clear')
 trend_lines_both(first_batting_team,first_bowling_team,title, over_list, i_overs,first_total_runs, first_wickets, first_over, first_run_by_overs,second_total_runs, second_wickets, second_over, second_run_by_overs)
 if first_wickets == num_first_batting_team - 1:
-     actual_first_over = first_over
      first_over = overs
 if second_wickets == num_first_bowling_team - 1:
-     actual_second_over = second_over
      second_over = overs
 winner_announcement(tournament_title,num_first_bowling_team,first_batting_team,first_bowling_team,first_total_runs,first_wickets,first_over,second_total_runs,second_wickets,second_over,actual_first_over,actual_second_over)
 
