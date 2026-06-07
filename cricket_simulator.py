@@ -567,7 +567,8 @@ def first_innings(tournament_title,overs,batting_team,num_batting_team,bowling_t
     first_batters[0]["team_total"] = total_runs
     first_batters[0]["wickets"] = wickets
     first_batters[0]["overs"] = over
-
+    if (wickets>=num_batting_team-1):
+         first_run_by_overs.append(total_runs)
     with open(f"{tournament_title}/1.{batting_team}_batting.json","w") as file:
         json.dump(first_batters,file)
     with open(f"{tournament_title}/1.{bowling_team}_bowling.json","w") as file:
@@ -983,7 +984,7 @@ def second_innings(tournament_title,target,overs,batting_team,num_batting_team,b
                         else:
                             break
 
-            if total_runs>=target:
+            if (total_runs>=target) or (wickets>=num_batting_team-1):
                  second_run_by_overs.append(total_runs)        
             j = j + 1
         if current_over < 0.6:
@@ -1286,6 +1287,10 @@ second_total_runs,second_wickets,second_over,second_run_by_overs = second_inning
 input("\nPress Enter to proceed")
 os.system('cls' if os.name == 'nt' else 'clear')
 trend_lines_both(first_batting_team,first_bowling_team,title, over_list, i_overs,first_total_runs, first_wickets, first_over, first_run_by_overs,second_total_runs, second_wickets, second_over, second_run_by_overs)
+if first_wickets == num_first_batting_team - 1:
+     first_over = overs
+if second_wickets == num_first_bowling_team - 1:
+     second_over = overs
 winner_announcement(tournament_title,num_first_bowling_team,first_batting_team,first_bowling_team,first_total_runs,first_wickets,first_over,second_total_runs,second_wickets,second_over)
 
 
