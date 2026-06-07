@@ -1229,7 +1229,18 @@ def winner_announcement(tournament_title,num_first_bowling_team,
         json.dump(table, f, indent=4) 
 
 
-#---------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------#
+def create_points_table(tournament_title):
+    path = f"{tournament_title}/points_table.json"
+
+
+    if os.path.exists(path):
+        return
+
+    points_table = []
+
+    with open(path, "w") as file:
+        json.dump(points_table, file, indent=4)
 #---------------------------------------------------------------------------------------------------
 tournament_title = input("Tournament name : (Else write FRIENDLY) ")
 if not os.path.exists(tournament_title):
@@ -1269,6 +1280,7 @@ actual_first_over = first_over
 actual_second_over = second_over
 input("\nPress Enter to proceed")
 os.system('cls' if os.name == 'nt' else 'clear')
+create_points_table(tournament_title)
 trend_lines_both(first_batting_team,first_bowling_team,title, over_list, i_overs,first_total_runs, first_wickets, first_over, first_run_by_overs,second_total_runs, second_wickets, second_over, second_run_by_overs)
 if first_wickets == num_first_batting_team - 1:
      first_over = overs
