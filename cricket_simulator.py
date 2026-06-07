@@ -1142,10 +1142,10 @@ def winner_announcement(tournament_title,num_first_bowling_team,
                         first_over,
                         second_total_runs,
                         second_wickets,
-                        second_over):
+                        second_over,actual_first_over,actual_second_over):
 
-    print(f"{first_batting_team}\t {first_total_runs}/{first_wickets}\t({first_over:.1f})")
-    print(f"{first_bowling_team}\t {second_total_runs}/{second_wickets}\t({second_over:.1f})")
+    print(f"{first_batting_team}\t {first_total_runs}/{first_wickets}\t({actual_first_over:.1f})")
+    print(f"{first_bowling_team}\t {second_total_runs}/{second_wickets}\t({actual_second_over:.1f})")
 
     if (second_total_runs > first_total_runs):
         print(f"{first_bowling_team} wins by {num_first_bowling_team-1-second_wickets} wicket(s)")
@@ -1288,9 +1288,11 @@ input("\nPress Enter to proceed")
 os.system('cls' if os.name == 'nt' else 'clear')
 trend_lines_both(first_batting_team,first_bowling_team,title, over_list, i_overs,first_total_runs, first_wickets, first_over, first_run_by_overs,second_total_runs, second_wickets, second_over, second_run_by_overs)
 if first_wickets == num_first_batting_team - 1:
+     actual_first_over = first_over
      first_over = overs
 if second_wickets == num_first_bowling_team - 1:
+     actual_second_over = second_over
      second_over = overs
-winner_announcement(tournament_title,num_first_bowling_team,first_batting_team,first_bowling_team,first_total_runs,first_wickets,first_over,second_total_runs,second_wickets,second_over)
+winner_announcement(tournament_title,num_first_bowling_team,first_batting_team,first_bowling_team,first_total_runs,first_wickets,first_over,second_total_runs,second_wickets,second_over,actual_first_over,actual_second_over)
 
 
