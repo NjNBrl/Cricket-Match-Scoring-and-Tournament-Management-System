@@ -11,3 +11,4 @@ Its most unique feature is the calcuation of player stats throughout the tournam
 4. all the stats can be viewed as an Image using print_stats.py. It just needs adjustment of location of stats file on line number
 
 ** DONT REMOVE ANY FOLDER AND FILES UNTIL match_stats.py IS RUN ** 
+as soon as a match is finished, just run match_stats.py before next match in tournament mode
