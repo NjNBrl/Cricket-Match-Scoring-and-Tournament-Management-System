@@ -1,0 +1,74 @@
+[
+    {
+        "team_name": "GWN",
+        "player_name": "ANJAN",
+        "runs": 24,
+        "balls": 10,
+        "fours": 2,
+        "sixes": 2,
+        "strike_rate": 240.0,
+        "wickets_taken": 0,
+        "overs": 1.0,
+        "runs_given": 20
+    },
+    {
+        "team_name": "GWN",
+        "player_name": "RAYAN",
+        "runs": 13,
+        "balls": 4,
+        "fours": 0,
+        "sixes": 2,
+        "strike_rate": 325.0,
+        "wickets_taken": 1,
+        "overs": 1.0,
+        "runs_given": 21
+    },
+    {
+        "team_name": "GWN",
+        "player_name": "SAJJWAL",
+        "runs": 16,
+        "balls": 4,
+        "fours": 1,
+        "sixes": 2,
+        "strike_rate": 400.0,
+        "wickets_taken": 0,
+        "overs": 1.0,
+        "runs_given": 14
+    },
+    {
+        "team_name": "SWN",
+        "player_name": "BARUWAL",
+        "runs": 26,
+        "balls": 8,
+        "fours": 0,
+        "sixes": 4,
+        "strike_rate": 325.0,
+        "wickets_taken": 0,
+        "overs": 1.0,
+        "runs_given": 12
+    },
+    {
+        "team_name": "SWN",
+        "player_name": "PANTA",
+        "runs": 24,
+        "balls": 8,
+        "fours": 2,
+        "sixes": 2,
+        "strike_rate": 300.0,
+        "wickets_taken": 1,
+        "overs": 1.0,
+        "runs_given": 18
+    },
+    {
+        "team_name": "SWN",
+        "player_name": "TAMANG",
+        "runs": 5,
+        "balls": 2,
+        "fours": 1,
+        "sixes": 0,
+        "strike_rate": 250.0,
+        "wickets_taken": 0,
+        "overs": 1.0,
+        "runs_given": 23
+    }
+]
