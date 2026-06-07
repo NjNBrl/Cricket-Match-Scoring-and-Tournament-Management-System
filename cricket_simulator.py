@@ -984,8 +984,7 @@ def second_innings(tournament_title,target,overs,batting_team,num_batting_team,b
                         else:
                             break
 
-            if (total_runs>=target) or (wickets>=num_batting_team-1):
-                 second_run_by_overs.append(total_runs)        
+       
             j = j + 1
         if current_over < 0.6:
             second_bowlers[bowler_id]["overs"] = current_over + second_bowlers[bowler_id]["overs"]
@@ -1010,6 +1009,8 @@ def second_innings(tournament_title,target,overs,batting_team,num_batting_team,b
         input("\nNEXT....")
         os.system('cls' if os.name == 'nt' else 'clear')
     partnership.append(total_runs)
+    if (total_runs>=target) or (wickets>=num_batting_team-1):
+            second_run_by_overs.append(total_runs)
     input("\nPress Enter for scorecard...")
     os.system('cls' if os.name == 'nt' else 'clear')
     print(f"**************************************************BATTING SCORECARD {batting_team}***************************************************")
